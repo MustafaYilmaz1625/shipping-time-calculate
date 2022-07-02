@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const UserList = (props) => (
   <div>
-    <Link href={`/user?name=${user.username}`} as={`${user.username}`}>
+    <Link href={"/user?name=mehmet"} as={`mehmet`}>
       <a className="username">mehmet</a>
     </Link>
 
