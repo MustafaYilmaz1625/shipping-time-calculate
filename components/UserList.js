@@ -1,12 +1,9 @@
 import Link from "next/link";
-const UserList = () => (
+
+const UserList = (props) => (
   <div>
-    <Link href="/user?name=mehmet" as="mehmet">
-      <a className="username">Mehmet</a>
-    </Link>
-    <br />
-    <Link href="/user?name=ahmet" as="ahmet">
-      <a className="username">Ahmet</a>
+    <Link href={`/user?name=${user.username}`} as={`${user.username}`}>
+      <a className="username">mehmet</a>
     </Link>
 
     <style jsx>{`

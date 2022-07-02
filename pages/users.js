@@ -6,7 +6,7 @@ const Users = (props) => (
     <div>
       <h2>Users Page</h2>
       <br />
-      <UserList />
+      <UserList users={props.users} />
     </div>
   </Layout>
 );
