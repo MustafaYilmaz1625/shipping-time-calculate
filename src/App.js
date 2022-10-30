@@ -12,7 +12,7 @@ function App() {
   const [color, setColor] = useState("grey");
   const initialWarning = { date: true, fabric: true, quantity: true };
   const [warnings, setWarnings] = useState(initialWarning);
-  const [isShown, setIsShown] = useState(false);
+  // const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {
     if (values.quantity < 100 && values.quantity > 1) {
@@ -108,13 +108,13 @@ function App() {
             </li>
             <li className="input-li">
               <div className="input-box">
-                {isShown ? (
+                {/* {isShown ? (
                   <span className="info">
                     Shipping Dates May Vary Based on Quantity
                   </span>
                 ) : (
                   <div style={{ visibility: "hidden" }}></div>
-                )}
+                )} */}
 
                 <span
                   className={warnings.quantity ? "closed warn" : "opened warn"}
@@ -122,7 +122,7 @@ function App() {
                   Select between 1 and 100
                   <TiWarningOutline className="warn-icon" />
                 </span>
-                <svg
+                {/* <svg
                   onMouseEnter={() => setIsShown(true)}
                   onMouseLeave={() => setIsShown(false)}
                   stroke="currentColor"
@@ -133,7 +133,7 @@ function App() {
                   height="1em"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
-                ></svg>
+                ></svg> */}
                 <input
                   type="number"
                   className="input quantity"
@@ -148,7 +148,6 @@ function App() {
           </ul>
         </div>
         <Calculate
-          props={values.quantity}
           values={values}
           warnings={warnings}
           setWarnings={setWarnings}

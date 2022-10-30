@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const Calculator = ({ values,props}) => {
-  const [popup, setPopup] = useState(false);
+const Calculator = ({ values}) => {
+  // const [popup, setPopup] = useState(false);
   const [calculated, setCalculated] = useState(false);
   const [shippingDay, setShippingDay] = useState();
 
@@ -28,7 +28,7 @@ const Calculator = ({ values,props}) => {
 
 
   const calculateHandler = () => {
-    const newDate = new Date(values.date).toLocaleString("tr-TR", options);
+    // const newDate = new Date(values.date).toLocaleString("tr-TR", options);
     const orderDate = new Date(values.date);
     let delay = 0;
     if (
@@ -67,8 +67,8 @@ const Calculator = ({ values,props}) => {
       };
       setShippingDay(finalDay.toLocaleString("tr-TR", options));
       setCalculated(true);
-    } else {
-      setPopup(true);
+    } else  {
+      // setPopup(true);
     }
   };
 
@@ -88,7 +88,7 @@ const Calculator = ({ values,props}) => {
           </div>
         )}
       </div>
-      {popup ? (
+      {/* {popup ? (
         <div className="popup">
           <div className="popup_inner">
             <h1 className="popup-text">
@@ -101,7 +101,7 @@ const Calculator = ({ values,props}) => {
         </div>
       ) : (
         <div style={{ visibility: "hidden" }}></div>
-      )}
+      )} */}
     </div>
   );
 };
